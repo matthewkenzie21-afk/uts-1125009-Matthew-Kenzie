@@ -6,8 +6,8 @@ public abstract class MenuItem {
     private double hargaBase;
     private int stok;
 
-    public MenuItem(int id2, String nama, double hargaBase, int stok) {
-        this.id = id2;
+    public MenuItem(String id, String nama, double hargaBase, int stok) {
+        this.id = id;
         this.nama = nama;
         this.hargaBase = hargaBase;
         this.stok = stok;

@@ -1,7 +1,17 @@
-package Controller;
+import Model.MenuItem;
+import View.View;
 
-//import model.*;
+public class MenuController {
 
-public class  {
+    public static void main(String[] args) {
+        MenuController controller = new MenuController();
+        View view = new View(MenuController);
+    }
+
+    public MenuItem[] getDaftarMenu() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDaftarMenu'");
+    }
+
     
 }
