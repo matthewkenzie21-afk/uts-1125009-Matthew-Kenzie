@@ -48,4 +48,29 @@ public abstract class MenuItem {
         this.stok = stok;
     }
 
+    public double hitungHargaTotal(int jumlah) {
+        return hitungHargaTotal() * jumlah;
+    }
+
+    public double hitungHargaTotal(int jumlah, String kodePromo) {
+        double total = hitungHargaTotal(jumlah);
+
+        if (kodePromo != null && kodePromo.equalsIgnoreCase("HEMAT10")) {
+            total = total * 0.90;
+        }
+
+        return total;
+    }
+
+    public double hitungHargaTotal(int jumlah, EnumKategori ukuran) {
+        double harga = hitungHargaTotal();
+
+        if (ukuran == EnumKategori.MEDIUM) {
+            harga = harga + 3000;
+        } else if (ukuran == EnumKategori.LARGE) {
+            harga = harga + 5000;
+        }
+
+        return harga * jumlah;
+    }
 }
