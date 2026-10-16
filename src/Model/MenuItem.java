@@ -52,16 +52,6 @@ public abstract class MenuItem {
         return hitungHargaTotal() * jumlah;
     }
 
-    public double hitungHargaTotal(int jumlah, String kodePromo) {
-        double total = hitungHargaTotal(jumlah);
-
-        if (kodePromo != null && kodePromo.equalsIgnoreCase("HEMAT10")) {
-            total = total * 0.90;
-        }
-
-        return total;
-    }
-
     public double hitungHargaTotal(int jumlah, EnumKategori ukuran) {
         double harga = hitungHargaTotal();
 

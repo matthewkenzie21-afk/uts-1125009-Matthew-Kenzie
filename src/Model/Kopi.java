@@ -1,24 +1,17 @@
 package Model;
 
-
-
-public class Kopi extends MenuItem implements {
+public class Kopi extends MenuItem implements Customizable {
     public Kopi(int id, String nama, double hargaBase, int stok) {
         super(id, nama, hargaBase, stok);
     }
 
     @Override
     double hitungHargaTotal() {
-        if (condition) {
-            
-        }
-        return 
-     
+        return hitungHargaTotal();  
     }
 
     @Override
     String getOrderDetail() {
-
-    
+        
     }   
 }
