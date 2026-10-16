@@ -1,43 +1,28 @@
 package Model;
 
 public abstract class MenuItem {
-    private int id;
+    private String id;
     private String nama;
     private double hargaBase;
     private int stok;
 
-    public MenuItem(int id, String nama, double hargaBase, int stok) {
-        this.id = id;
+    public MenuItem(int id2, String nama, double hargaBase, int stok) {
+        this.id = id2;
         this.nama = nama;
         this.hargaBase = hargaBase;
         this.stok = stok;
     }
 
-    abstract double hitungHargaTotal();
-    abstract String getOrderDetail();
-
-    public int getId() {
+    public String getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNama() {
         return nama;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
-    }
-
-    public double setHargaBase() {
+    public double getHargaBase() {
         return hargaBase;
-    }
-
-    public void setHargaBase(double hargaBase) {
-        this.hargaBase = hargaBase;
     }
 
     public int getStok() {
@@ -48,19 +33,10 @@ public abstract class MenuItem {
         this.stok = stok;
     }
 
+    public abstract double hitungHargaTotal();
+    public abstract String getOrderDetail();
+
     public double hitungHargaTotal(int jumlah) {
         return hitungHargaTotal() * jumlah;
-    }
-
-    public double hitungHargaTotal(int jumlah, EnumKategori ukuran) {
-        double harga = hitungHargaTotal();
-
-        if (ukuran == EnumKategori.MEDIUM) {
-            harga = harga + 3000;
-        } else if (ukuran == EnumKategori.LARGE) {
-            harga = harga + 5000;
-        }
-
-        return harga * jumlah;
     }
 }

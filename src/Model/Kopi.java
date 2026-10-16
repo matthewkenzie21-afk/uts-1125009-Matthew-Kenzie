@@ -8,12 +8,12 @@ public class Kopi extends MenuItem implements Customizable {
     }
 
     @Override
-    double hitungHargaTotal() {
+    public double hitungHargaTotal() {
         return hitungHargaTotal();  
     }
 
     @Override
-    String getOrderDetail() {
+    public String getOrderDetail() {
         
     }
 
@@ -22,5 +22,14 @@ public class Kopi extends MenuItem implements Customizable {
         
         throw new UnsupportedOperationException("Unimplemented method 'customize'");
     }
+
+    @Override
+    public void customize(int[] customizations) {
+     
+        
+        throw new UnsupportedOperationException("Unimplemented method 'customize'");
+    }
   
 }
+
+

@@ -3,17 +3,21 @@ package Util;
 import java.util.Scanner;
 
 public class InputUtil {
-    private static Scanner sc = new Scanner(System.in);
+    private static Scanner scan = new Scanner(System.in);
 
-    public static int readInt() {
-        return sc.nextInt();
+    public static String inputString(String pesan) {
+        System.out.print(pesan);
+        return scan.nextLine();
     }
 
-    public static double readDouble() {
-        return sc.nextDouble();
-    }
-
-    public static String readLine() {
-        return sc.nextLine();
+    public static int inputInt(String pesan) {
+        while (true) {
+            try {
+                System.out.print(pesan);
+                return Integer.parseInt(scan.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Masukkan angka yang benar!");
+            }
+        }
     }
 }
